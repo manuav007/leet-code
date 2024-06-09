@@ -6,6 +6,10 @@ public:
         int m = INT_MAX;
         while(low <= high){
             int mid = (low + high)/2;
+            if(nums[low] <= nums[high]){
+                m = min(m, nums[low]);
+                break;
+            }
             if(nums[mid] >= nums[low]){
                 m = min(m, nums[low]);
                 low = mid+1;
